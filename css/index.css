@@ -27,6 +27,9 @@
   src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
 }
 
+
+/* ======= Base Styles =========*/
+
 * {
   margin: 0;
   padding: 0;
@@ -38,10 +41,7 @@ body {
   background-color: var( --neutral-color-light-grey);
 }
 
-img {
-  max-width: 100%;
-  border-radius: 20px;
-}
+/* ======= Typography =========*/
 
 h1 {
     font-family: youngserif, sans-serif;
@@ -52,7 +52,7 @@ h2 {
   color: var(--primary-color-nutmeg);
 }
 
-
+/* ======= Components =========*/
 
 .banner h1 {
 margin-bottom: 1rem;
@@ -69,6 +69,11 @@ margin-bottom: 1rem;
 }
 
 
+img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
 p, li {
     line-height: 1.8;
     color: var(--neutral-color-dark-charcoal);
@@ -77,20 +82,29 @@ p, li {
 ul, ol {
     padding-left: 30px;
 }
+
+
+li {
+    margin-top: 0.5rem;
+}
+
+ol li strong {
+    padding-left: .8rem;
+}
+/* ======= Specific Overrides =========*/
+
+
 .container {
     max-width: 700px;
     margin-inline: auto;
     padding: 5rem 0 ;
-    /* margin-bottom: 5px; */
     background-color: #fff;
 }
 .container div:not(first-child) {
   padding: 1.5rem;
 }
 
-li {
-    margin-top: 0.5rem;
-}
+
 
 .instructions {
     border-top: 1px solid var(--neutral-color-light-grey);
@@ -114,23 +128,51 @@ li {
     border-bottom: none;
 }
 
-
 .attribution {
   font-size: 11px;
   text-align: center;
   margin-bottom: 5rem;
   margin-top: 2rem;
 }
-
+.nutrition-list li:nth-child(1), 
+.nutrition-list li:nth-child(2), 
+.nutrition-list li:nth-child(3), 
+.nutrition-list li:nth-child(4) { 
+    color: var(--primary-color-nutmeg); 
+}
+.nutrition-list span {
+    color: #000;
+}
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 
+/* ======= Media Queries =========*/
+
+
 @media (min-width: 768px) {
+
+    img {
+        max-width: 100%;
+        border-radius: 20px;
+      }
+
     .container {
         border-radius: 20px;
         margin: 5rem auto 0;
         padding: 2rem 2rem ;
     }
+}
+
+
+
+@media (max-width: 375px) {
+
+    img {
+        max-width: 100%;
+        border-radius: 0;
+        margin-top: -80px;
+      }
+  
 }
