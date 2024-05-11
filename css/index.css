@@ -1,24 +1,136 @@
+ /* ======= Variable =========*/
+
+:root {
+    /* Colors */
+    --primary-color-nutmeg: hsl(14, 45%, 36%);
+    --primary-color-dark-raspberry: hsl(332, 51%, 32%);
+
+    --neutral-color-White: hsl(0, 0%, 100%);
+    --neutral-color-rose-white: hsl(330, 100%, 98%);
+    --neutral-color-eggshell: hsl(30, 54%, 90%);
+    --neutral-color-light-grey: hsl(30, 18%, 87%);
+    --neutral-color-wenge-brown: hsl(30, 10%, 34%);
+    --neutral-color-dark-charcoal: hsl(24, 5%, 18%);
+    
+}
+
+
 /* ======= Fonts =========*/
 
- 
-
 @font-face {
-    font-family: outfit;
-    src: url(/assets/fonts/outfit/static/Outfit-Regular.ttf)format("ttf")
+  font-family: outfit;
+  src: url(/assets/fonts/outfit/static/Outfit-Regular.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: youngserif;
-    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format("ttf");
+  font-family: youngserif;
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-     
-    font-family: outfit;
+  font-family: outfit, sans-serif;
+  background-color: var( --neutral-color-light-grey);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+h1 {
+    font-family: youngserif, sans-serif;
+}
+
+h2 {
+  font-family: youngserif, sans-serif;
+  color: var(--primary-color-nutmeg);
+}
+
+
+
+.banner h1 {
+margin-bottom: 1rem;
+}
+.banner article {
+    background-color: var(--neutral-color-rose-white);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.banner article h3 {
+    color: var(--primary-color-dark-raspberry);
+}
+
+
+p, li {
+    line-height: 1.8;
+    color: var(--neutral-color-dark-charcoal);
+}
+
+ul, ol {
+    padding-left: 30px;
+}
+.container {
+    max-width: 700px;
+    margin-inline: auto;
+    padding: 5rem 0 ;
+    /* margin-bottom: 5px; */
+    background-color: #fff;
+}
+.container div:not(first-child) {
+  padding: 1.5rem;
+}
+
+li {
+    margin-top: 0.5rem;
+}
+
+.instructions {
+    border-top: 1px solid var(--neutral-color-light-grey);
+    border-bottom: 1px solid var(--neutral-color-light-grey);
+}
+
+.nutrition-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nutrition ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--neutral-color-light-grey);
+    padding: 0.5rem 0;
+}
+
+.nutrition ul li:last-child {
+    border-bottom: none;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        border-radius: 20px;
+        margin: 5rem auto 0;
+        padding: 2rem 2rem ;
+    }
 }
